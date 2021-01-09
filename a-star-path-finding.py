@@ -13,7 +13,7 @@ pygame.display.set_caption("A* Path Finding Algorithm")
 # Setting variables for colors with their respective color-codes.
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
-BLUE = (0, 255, 0)
+BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -21,6 +21,7 @@ PURPLE = (128, 0, 128)
 ORANGE = (255, 165 ,0)
 GREY = (128, 128, 128)
 TURQUOISE = (64, 224, 208)
+PINK = (252, 3, 111)
 
 class Spot:
     def __init__(self, row, col, width, total_rows):
@@ -46,16 +47,16 @@ class Spot:
         return self.color == BLACK
 
     def is_start(self):
-        return self.color == ORANGE
+        return self.color == BLUE
 
     def is_end(self):
-        return self.color == TURQUOISE
+        return self.color == PINK
 
     def reset(self):
         self.color = WHITE
 
     def make_start(self):
-        self.color = ORANGE
+        self.color = BLUE
 
     def make_closed(self):
         self.color = RED
@@ -68,7 +69,7 @@ class Spot:
         self.color = BLACK
 
     def make_end(self):
-        self.color = TURQUOISE
+        self.color = PINK
 
     def make_path(self):
         self.color = YELLOW
@@ -147,6 +148,7 @@ def algorithm(draw, grid, start, end):
         if current == end:
             reconstruct_path(came_from, current, draw)
             end.make_end()
+            start.make_start()
             return True
 
         for neighbor in current.neighbors:
