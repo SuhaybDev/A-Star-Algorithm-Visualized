@@ -6,7 +6,7 @@ A visualization of how the A* algorithm traverses a 50x50 grid to find the short
 ## Usage
 Click anywhere on the grid to set the start point. Then set an end point by clicking elsewhere on the grid. Next, set up blockades by clicking and dragging the mouse across the screen. Press the spacebar key to initiate the algorithm and visualization process. After complection press the C key to clear the grid and start over.
 
-![A* Path Finding Algorithm Example](https://github.com/SuhaybDev/A-Star-Algorithm-Visualized/preview_video.gif "A* Path Finding Algorithm Example")
+![A* Path Finding Algorithm Example](https://github.com/SuhaybDev/A-Star-Algorithm-Visualized/blob/master/preview_video.gif "A* Path Finding Algorithm Example")
 
 <br>
 
